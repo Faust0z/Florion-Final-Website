@@ -1,0 +1,973 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton&family=Unna&display=swap');
+
+/*Paleta de colores: https://coolors.co/e8c7b3-ffdbc5-fff2eb-ff6c40-fd593e-c92a3e-8e1537-710b34-530030*/
+
+html{scroll-behavior: smooth;}
+
+body { margin:0px; padding:0px; overflow-x: hidden; background-color: #fff2eb;}
+
+:root{
+    --indiceZoom: 1.5;
+
+    --font-titulos: 'Unna', serif;
+    --font-textos: 'Neuton', serif;
+
+    --nav-fuente: calc(clamp(2.5rem, 3vw + 0.125rem, 80vh) / var(--indiceZoom));
+    --nav-logo: clamp(10rem, 30vw + 1rem, 90vh);
+
+    --font-size-TitleCard: clamp(5.2rem, 10vw + 1rem, 25rem);
+    --size-flecha-Scroll: clamp(4rem, 8vh, 7rem);
+
+    --font-size-InformationBand-title: clamp(60px, 6vw + 1rem, 12rem);
+    --font-size-InformationBand-subTitle: calc(clamp(35px, 2vw + 2rem, 8rem) / var(--indiceZoom));
+
+    --gallery-closeIcon: clamp(3rem, 3vw, 7.5rem);
+
+    --carr1-title: clamp(2rem, 8vw, 11rem);
+    --carr1-text: calc(clamp(1rem, 2.5vw + 0.3rem, 4rem) / var(--indiceZoom));
+    --carr1-flechas: clamp(1rem, 4vw + 1rem, 12rem);
+    --carr1-MarginEntreImgs: clamp(1.5vw, 1vw + 1rem, 0.5vw);
+
+    --cards-text: calc(clamp(2rem, 1.5vw + 1rem, 4rem) / var(--indiceZoom)); 
+
+    --footer-text: clamp(1.25rem, 1.5vw, 2.5rem); 
+    --footer-icons: clamp(2rem, 3vw, 7.5rem);
+    --footer-logo: clamp(16rem, 30vw + 1rem, 90vh);
+
+    --titles-color: #ff6c40;
+    --titlesConBg-color-: #C92A3E;
+}
+
+/*------------------------------------Generales------------------------------------*/
+
+.barrita-oscura {
+    background-color: #8E1537; 
+    width: 100%;
+    height: 3px;
+    opacity: 0.3;
+}
+
+.separador-1{
+    height: 5.5vw;
+    background-color: #fff2eb;
+}
+
+.separador-2{
+    height: 3vw;
+    background-color: #fff2eb;
+}
+
+.texto-no-seleccionable{
+    user-select: none;
+}
+
+/*------------------------------------Generales------------------------------------*/
+
+/*------------------------------------Anclas------------------------------------*/
+
+#anchorParaFlechaScroll{
+    position: relative;
+    top: 30vh;
+}
+
+#anchorAcercaDe{
+    position: relative;
+    bottom: calc(80px + 5vh + 1vw);
+}
+
+#anchorGaleria{
+    position: relative;
+    bottom: calc(80px + 5vh + 1vw);
+}
+
+#anchorContacto{
+    position: relative;
+    bottom: calc(80px + 5vh + 1vw);
+}
+
+/*------------------------------------Anclas------------------------------------*/
+
+/*------------------------------------Header------------------------------------*/
+
+.sticky-header {
+    position: fixed;
+    overflow-x: hidden;
+    width: 100%;
+    background: linear-gradient(#FF430A, #FF6333);
+    z-index: 10;
+    height: max(60px, fit-content);
+    font-family: var(--font-titulos);
+    box-shadow: 0px 28px 54px -21px rgba(0,0,0,0.6);
+}
+
+.header-titulo {
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-titulo img{
+    image-resolution: 16/3;
+	width: 300px;
+	margin: 0;
+    vertical-align: middle;
+}
+
+.links-nav{ 
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    margin:0px; 
+    padding:0px;
+}
+
+.links-nav li{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-titulo{
+    line-height: max(60px, 4.5vw);
+}
+
+.links-nav{
+    line-height: max(70px, 5vw);
+}
+
+.links-nav li, .tuerca { 
+    font-size: var(--nav-fuente);
+    border-radius: 8px;
+    padding-inline: 10px;
+}
+
+.links-nav li a, .links-nav i  {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .header-titulo {
+        position: absolute;
+        left: -100%;
+        transition: left 0.5s ease;
+    }
+
+    .links-nav{
+        text-align: center;
+        margin-right: 0%;
+    }
+}
+
+@media (min-width: 701px) {
+    .header-titulo {
+      position: absolute;
+      left: 2%;
+      transition: left 0.1s ease;
+    }
+
+    .links-nav{
+        text-align: right;
+        margin-right: 2%;
+    }
+}
+
+@media (max-width: 900px) {
+    .header-titulo img{
+        width: var(--nav-logo);
+    }
+}
+
+.hvr-radial-out {
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    background: #c0313100;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+.hvr-radial-out:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #C92A3E;
+    border-radius: 90%;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active {
+    color: white;
+}
+
+.hvr-radial-out:hover:before, .hvr-radial-out:focus:before, .hvr-radial-out:active:before {
+    transform: scale(2);
+}
+
+/* Menú tuerca configuración*/
+
+.tuerca {
+    color: white;
+    vertical-align: middle;
+    transition: transform 0.3s, color 0.3s, rotate 0.5s;
+    cursor: pointer;
+}
+
+.tuerca:hover {
+    transform: scale(1.3);
+    color: #530030;
+}
+
+.menu-flotante * {
+    margin: 0; padding: 0;
+}
+
+.menu-flotante {
+    display: block;
+    position: fixed;
+    right: 2vw;
+    background-color: #FF6C40;
+    z-index: 11;
+    padding-bottom: 1.5vw;
+    box-shadow: 0px 1px 26px -7px rgba(0,0,0,1);
+    box-shadow: 0px 1px 26px -7px rgba(0,0,0,0.5) inset;
+    
+    pointer-events: none;
+    opacity: 0;
+    margin-top: -20px;
+    transition: opacity 0.5s ease, margin-top 0.5s ease;
+}
+
+.menu-flotante.mostrar {
+    pointer-events: auto;
+    opacity: 1;
+    margin-top: 0;
+}
+
+.menu-flotante h4{
+    font-size: var(--nav-fuente);
+    font-family: var(--nav-fuente);
+    margin: 1vw;
+    line-height: 100%;
+}
+
+.menu-flotante div{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-flotante div button{
+    font-size: var(--nav-fuente);
+    font-family: var(--nav-fuente);
+    margin-inline: 0.5vw;
+    padding: 5px 10px;
+    transition: color 0.5s ease-out, transform 0.4s ease;
+    cursor: pointer;
+}
+
+.menu-flotante div button.seleccionado{
+    background-color: #a91740;
+    color: white;
+}
+
+.menu-flotante div button:hover{
+    transform: scale(1.1);
+}
+
+/*------------------------------------Header------------------------------------*/
+
+/*------------------------------------Titlecard------------------------------------*/
+
+.titlecard-container{
+    background: url("img/FlorionFondo.webp") center/cover;
+    height: calc(var(--font-size-TitleCard) * 4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.titlecard-container h1{
+    font-size: var(--font-size-TitleCard);
+    font-family: var(--font-textos);
+    letter-spacing: 10px;
+    color: aliceblue;
+    margin: 0;
+    text-shadow: 0px 4px 9px rgba(0,0,0,0.49);
+}
+
+.titlecard-container h3{
+    font-size: calc(var(--font-size-TitleCard) / 4);
+    margin: calc(var(--font-size-TitleCard) * -1 / 6);
+    font-family: var(--font-titulos);
+    color: aliceblue;
+    text-shadow: 0px 4px 9px rgba(0,0,0,0.49);
+}
+
+.flechaScroll-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 89dvh;
+    z-index: 3;
+}
+
+.arrow-wrap{
+    display: none;
+}
+
+.flechaScroll{
+    font-size: var(--size-flecha-Scroll);
+    color: #ffdbc5b3;
+}
+
+/*------------------------------------Titlecard------------------------------------*/
+
+/*------------------------------------Information Band 01------------------------------------*/
+
+.informationBand-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    isolation: isolate;
+    padding-inline: 4vw;
+    text-shadow: 0px 4px 9px rgba(0,0,0,0.25);
+}
+
+.informationBand-container::after{
+    background: url("img/FondoRosas.webp") center/cover;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: .3;
+}
+
+.informationBand-container h1{
+    font-size: var(--font-size-InformationBand-title);
+    color: var(--titlesConBg-color-);
+    font-family: var(--font-titulos);
+    margin: 0;
+    opacity: 100%;
+    text-align: center;
+    padding-top: min(30vh, 20px);
+}
+
+.informationBand-container p{
+    font-size: var(--font-size-InformationBand-subTitle);
+    font-family: var(--font-textos);
+    margin: 0;
+    text-align: center;
+    opacity: 100%;
+    color: black;
+    padding-bottom: min(30vh, 30px);
+}
+
+/*------------------------------------Information Band 01------------------------------------*/
+
+/*------------------------------------Videos-band------------------------------------*/
+
+.grid-container {
+    width: 90%;
+    overflow-x: hidden;
+}
+
+.vidBand-Titulos h1, .vidBand-Titulos h3{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.vidBand-Titulos h1{
+    color: var(--titlesConBg-color-);
+    font-family: var(--font-titulos);
+    font-size: var(--carr1-title);
+    text-shadow: 0px 4px 9px rgba(0,0,0,0.15);
+}
+
+.vidBand-Titulos h3{
+    font-family: var(--font-textos);
+    font-size: var(--carr1-text);
+    padding-bottom: 10px;
+    text-shadow: 0px 4px 9px rgba(0,0,0,0.15);
+}
+
+.videos-band {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFE7D8;
+    padding-block: 20px;
+}
+
+.grid-container {
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.video {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Ajustar el ancho al 100% */
+    height: 0;
+    padding-top: 56.25%; /* Proporción 16:9 */
+    box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.52);
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 700px) {
+    .grid-container {
+        height: 350px;
+    }
+
+    .video {
+        height: 300px;
+        padding-top: 0;
+    }
+
+    .video iframe {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: minmax(calc(33.3333vw / 3 * 0.5625), 1fr);
+    }
+}
+
+/*Cambiar la barrita de scroll*/
+
+.grid-container::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.grid-container::-webkit-scrollbar{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.grid-container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+	background-color: #FD593E;	
+	background-image: -webkit-linear-gradient(45deg,
+	                                          rgba(255, 255, 255, .2) 25%,
+											  transparent 25%,
+											  transparent 50%,
+											  rgba(255, 255, 255, .2) 50%,
+											  rgba(255, 255, 255, .2) 75%,
+											  transparent 75%,
+											  transparent)
+}
+
+/*------------------------------------Videos-band------------------------------------*/
+
+/*------------------------------------Aportes-Comunidad------------------------------------*/
+.AportComun-titulos h1, .AportComun-titulos h3{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.AportComun-titulos h1{
+    color: var(--titlesConBg-color-);
+    font-family: var(--font-titulos);
+    font-size: var(--carr1-title);
+    text-shadow: 0px 4px 9px rgba(0,0,0,0.15);
+}
+
+.AportComun-titulos h3{
+    font-family: var(--font-textos);
+    font-size: var(--carr1-text);
+    padding-bottom: 10px;
+    text-shadow: 0px 4px 9px rgba(0,0,0,0.15);
+}
+
+.cards-Wrapper{
+    background-color: #FFE7D8;
+    padding-block: 3vh;
+}
+
+.cards {
+    width: 90%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    position: relative;
+    background-color: #FFDBC5;
+    margin: 1.13%;
+    border-radius: 5px;
+    transition: 0.3s;
+    flex: 1 1 auto;
+    box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 769px) {
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex-basis: 48%;
+        margin: 1%;
+    }
+}
+
+.card h3{
+    font-family: var(--font-titulos);
+    font-size: var(--cards-text);
+    padding-bottom: 10px;
+    margin:0px;
+    color: #530030;
+    line-height:90%;
+    padding-left: 3%;
+    padding-top:3%;
+    padding-bottom:3%;
+    border-radius:20px;
+    transition: ease 1s;
+}
+
+.line{
+    height:2px;
+    width:95%;
+    margin:auto;
+    background-color: #FF430A;
+}
+
+
+.card p{
+    font-family: var(--font-textos);
+    font-size: var(--cards-text);
+    margin:0px;
+    color: black;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top:3%;
+    padding-bottom:3%;
+    border-radius:20px;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 15px 7px rgba(0,0,0,0.1);
+}
+
+.subtitle-comunidad{
+    margin: 0;
+    text-align: center;
+    font-family: var(--carr1-title);
+    font-size: var(--carr1-text);
+    background-color: #FFE7D8;
+    padding-bottom: 2vh;
+}
+
+/*------------------------------------Aportes-Comunidad------------------------------------*/
+
+/*------------------------------------Newsletter------------------------------------*/
+
+.newsletter *{
+    margin: 0;
+}
+
+.newsletter{
+    text-align: center;
+}
+
+.newsletter h1{
+    margin-top: 3vh;
+    font-family: var(--font-titulos);
+    font-size: var(--carr1-title);
+    color: #530030;
+}
+
+.newsletter h3{
+    margin-top: 3vh;
+    font-family: var(--font-titulos);
+    font-size: var(--carr1-text);
+}
+
+.newsletter div{
+    margin-block: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 5vh;
+}
+
+.newsletter div i{
+    background-color: #8E1537;
+    color: white;
+    line-height: 5vh;
+    font-size: calc(var(--footer-icons) / 1.7);
+	width: var(--footer-icons);
+	height: var(--footer-icons);
+    line-height: var(--footer-icons);
+}
+
+.newsletter div input{
+    width: 40vw;
+    margin-inline: 1vh;
+    font-family: var(--font-titulos);
+    font-size: var(--carr1-text);
+    font-style: italic;
+    padding-left: 1vw;
+}
+
+.newsletter div button{
+    background-color: #8E1537;
+    color: white;
+    font-family: var(--font-textos);
+    font-size: var(--carr1-text);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.newsletter div button:hover{
+    transform: scale(1.05);
+    background-color: #a91740;
+}
+
+/*------------------------------------Newsletter------------------------------------*/
+
+/*------------------------------------Community Gallery 01------------------------------------*/
+
+.titulosYFlechas{
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: nowrap;
+    background-color: #fff2eb;
+    text-shadow: 0px 4px 9px rgba(0,0,0,0.15);
+    padding-bottom: 15px;
+}
+
+.titulosYFlechas h1{
+    margin-block: 0;
+    font-family: var(--font-titulos);
+    font-size: calc(var(--carr1-title) / 1.5);
+    text-wrap: nowrap;
+    color: var(--titlesConBg-color-);
+}
+
+.flechas{
+    font-size: var(--carr1-flechas);
+    margin-top: 1vw;
+}
+
+.carrCard img{
+    width: 100%;
+    height: 55vh;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0px 5px 19px 0px rgba(0,0,0,0.3);
+}
+
+.carrCard-margin{
+    margin-inline: var(--carr1-MarginEntreImgs);
+}
+
+.carrCard a{
+    font-family: var(--font-titulos);
+    font-size: var(--font-titulos);
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: 10px;
+}
+
+.carrCard a h1{
+    color: #710B34;
+    margin: 0;
+    padding: 0;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    opacity: 0;
+    transition: opacity 450ms ease-in-out;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 9; /* Parche para poder implementarlo con florion. El sticky nav me tapaba las imagenes, asique las desplacé para abajo*/ 
+}
+
+.lightbox:target {
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+.lightbox:target img {
+    filter: blur(0);
+}
+
+.lightbox .content {
+    max-width: 90%;
+    position: relative;
+    color: #fff;
+}
+
+.lightbox .title {
+    display: block;
+    margin: 0;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(50%);
+    font-size: 1.5em;
+    opacity: 0;
+}
+
+.lightbox .title::after {
+    content: " ";
+    background-color: rgba(0, 0, 0, 0.4);
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 94%; /* Parche para florion. Las imagenes son más chicas, asique la barra negra también debe serlo*/
+    position: absolute;
+    transition: all 350ms ease-in-out 250ms;
+    opacity: 0.5;
+    transform-origin: bottom;
+    mix-blend-mode: soft-light;
+}
+
+.lightbox img {
+    max-height: 80vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    filter: blur(20px);
+    transform: translateY(6.9vh); /* Parche para poder implementarlo con florion. El sticky nav me tapaba las imagenes, asique las desplacé para abajo*/
+}
+
+.lightbox a.close {
+    width: var(--gallery-closeIcon);
+    height: var(--gallery-closeIcon);
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1, 1);
+    opacity: 0.5;
+    transform-origin: right top;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    transform: translateY(6.9vh); /* Parche para poder implementarlo con florion. El sticky nav me tapaba las imagenes, asique las desplacé para abajo*/
+}
+
+.lightbox a.close::after {
+    content: "X";
+    font-size: calc(var(--gallery-closeIcon) / 1.3);
+}
+
+.lightbox .content:hover > .title {
+    opacity: 1;
+    transform: translateY(6.5vh); /* Parche para poder implementarlo con florion. El sticky nav me tapaba las imagenes, asique las desplacé para abajo*/
+}
+
+.lightbox .content:hover > .title::after {
+    opacity: 1;
+}
+
+.lightbox .content > * {
+    transition: all 450ms ease-in-out;
+}
+
+/*------------------------------------Community Gallery 01------------------------------------*/
+
+/*------------------------------------Footer------------------------------------*/
+
+.footer-container{
+    font-family: Open Sans;
+    background: linear-gradient(#FF6333, #FF430A);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	padding-top: 25px;
+	font-size: var(--footer-text);
+}
+
+.footer-left, .footer-center{
+	display: inline-block;
+	align-items: start;
+	vertical-align: top;
+}
+
+.footer-left{
+	width: 40%;
+	margin-left: 17%;
+	padding-top: 15px;
+}
+ 
+.footer-container img{
+	image-resolution: 16/3;
+	width: 300px;
+	margin: 0;
+}
+
+.footer-container .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-container .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+    font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-company-name{
+	color:  #222;
+	font-size: var(--footer-text);
+	font-weight: normal;
+	margin: 0;
+	padding-bottom: 7px;
+	text-align: center;
+	background: #FF430A;
+}
+
+.footer-container .footer-center i{
+	background-color:  #530030;
+	color: #ffffff;
+	font-size: calc(var(--footer-icons) / 1.7);
+	width: var(--footer-icons);
+	height: var(--footer-icons);
+	border-radius: 50%;
+	text-align: center;
+	line-height: var(--footer-icons);
+}
+
+.footer-center div{
+	padding-bottom: 10px;
+	transition: transform .2s;
+}
+
+.footer-center h4{
+	margin: 0;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.footer-container .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+  	font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-container .footer-center p a{
+	color:  white;
+	text-decoration: none;
+}
+
+.footer-container .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-container .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-icons h4{
+	margin: 0;
+}
+
+.footer-container .footer-icons a{
+	display: inline-block;
+	width: var(--footer-icons);
+	height: var(--footer-icons);
+	cursor: pointer;
+	background-color:  #530030;
+	border-radius: 2px;
+
+	font-size: calc(var(--footer-icons) / 1.5);
+	color: #ffffff;
+	text-align: center;
+	line-height: var(--footer-icons);
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+	transition: transform .2s;
+	transition: box-shadow 0.1s linear, transform 0.15s ease-out;
+}
+
+.footer-center div:hover{
+	transform: scale(1.1);
+}
+
+.footer-icons a:hover{
+	transform: scale(1.2);
+	box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1000px) {
+	.footer-left{
+		display: block;
+		width: 100%;
+		margin: 0;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+    
+    .footer-left a img{
+        width: var(--footer-logo);
+    }
+
+	.footer-center{
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.footer-center h4{
+		margin-bottom: 0px;
+	}
+}
+
+/*------------------------------------Footer------------------------------------*/

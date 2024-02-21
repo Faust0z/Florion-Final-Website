@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Florion</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.10.5/sweetalert2.min.js" integrity="sha512-WHVh4oxWZQOEVkGECWGFO41WavMMW5vNCi55lyuzDBID+dHg2PIxVufsguM7nfTYN3CEeQ/6NB46FWemzpoI6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+    <header>
+        <nav class="sticky-header">
+            <a href="#titlecard" class="header-titulo texto-no-seleccionable"><img src="img/logo/Logo florion.webp" alt="" rel="preload" as="image"/></a>
+            <ul class="links-nav">
+                <li class="hvr-radial-out texto-no-seleccionable"><a href="#titlecard">Inicio</a></li>
+                <li class="hvr-radial-out texto-no-seleccionable"><a href="#anchorAcercaDe">Acerca de</a></li>
+                <li class="hvr-radial-out texto-no-seleccionable"><a href="#anchorGaleria">Galería</a></li>
+                <li class="hvr-radial-out texto-no-seleccionable"><a href="#anchorContacto">Contacto</a></li>
+                <li class="tuercaContainer">
+                  <span class="fa-solid fa-gear tuerca texto-no-seleccionable" onclick="toggleMenuFlotante()"></span>
+                  <div class="menu-flotante" id="menuFlotante">
+                    <ul>
+                        <h4>Opción: Tamaño de los textos</h4>
+                        <div>
+                          <button class="seleccionado texto-no-seleccionable" id="btnNormal" onclick="defTamanoTextoNormal()">Normal</button>
+                          <button class="texto-no-seleccionable" id="btnGrande" onclick="defTamanoTextoGrande()">Grande</button>
+                        </div>
+                    </ul>
+                  </div>
+                </li>
+            <ul>
+        </nav>
+    </header>
+
+
+    <div id="anchorParaFlechaScroll"></div>
+
+    
+    <section id="titlecard">
+      <div class="flechaScroll-container">
+        <a href="#anchorParaFlechaScroll" class="arrow-wrap">
+          <i class="flechaScroll fa-solid fa-circle-arrow-down fa-beat-fade"></i>
+        </a>
+      </div>
+
+      <div class="titlecard-container" rel="preload" as="image">
+        <h1><em>Florion</em></h1>
+        <h3>Del patio a la casa</h3>
+      </div>
+    </section>
+    <div class="barrita-oscura"></div>
+
+
+    <div class="separador-2"></div>
+
+
+    <div class="barrita-oscura"></div>
+    <section id="Information-Band-01">
+      <div class="anchors" id="anchorAcercaDe"></div>
+      <div class="informationBand-container">
+        <h1><em>Acerca de Florion</em></h1>
+        <p>
+          Florion es tu destino en línea para explorar el maravilloso mundo de las
+          plantas y conectar con amantes de la naturaleza. Descubre consejos de
+          cuidado, inspiración y una comunidad apasionada en un solo lugar.
+        </p>
+      </div>
+    </section>
+    <div class="barrita-oscura"></div>
+
+
+    <div class="separador-2"></div>
+
+
+    <section id="Carrusel-01">
+      <div id="anchorGaleria"></div>
+      <div class="titulosYFlechas">
+        <i class="flechas flechaIzq fa-solid fa-arrow-left fa-fade"></i>
+        <h1 class><em>Galería de la comunidad</em></h1>
+        <i class="flechas flechaDer fa-solid fa-arrow-right fa-fade"></i>
+      </div>
+      <div class="carrContainer">
+        <div class="slick-carrousel">
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/nup5p1fj3ehc1.jpg?width=2052&format=pjpg&auto=webp&s=1af20a203a5dfc9b36ddd394e61059fdb9c90e5e"/>
+            <a href="#lightbox-18"><h1>Abrir imagen</h1></a>
+          </div>
+
+          <div class="carrCard carrCard-margin">
+            <img src="https://i.pinimg.com/originals/1f/6e/02/1f6e02f2747f79a9bc0812969f5ae2e6.jpg"/>
+            <a href="#lightbox-1"><h1><h1>Abrir imagen</h1></h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://i.pinimg.com/736x/88/86/15/8886155b233516efe733db47d9766f5c.jpg"/>
+            <a href="#lightbox-8"><h1><h1>Abrir imagen</h1></h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/5taxjskrelic1.jpg?width=960&format=pjpg&auto=webp&s=8f372dbd5bf06c6736dfd1945fb79bff8b4d6dcd"/>
+            <a href="#lightbox-14"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/xdzm2skrelic1.jpg?width=960&format=pjpg&auto=webp&s=a8d4ce9f951bfcbeb1205a35d379a21c16ade292"/>
+            <a href="#lightbox-15"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/wkgitxkrelic1.jpg?width=960&format=pjpg&auto=webp&s=5ff5cc7f99ca1dbe2f5d96f0764a4006b0363d9a"/>
+            <a href="#lightbox-16"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/qtj7rwkrelic1.jpg?width=960&format=pjpg&auto=webp&s=bd03e887d789d0f16265bd704650b960f9b026fb"/>
+            <a href="#lightbox-17"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://4.bp.blogspot.com/-0d7LIxyHXFw/Tch27-SGhKI/AAAAAAAAAAQ/zujC4PLz8gw/s1600/plant-a-flower-garden-preschool-craft1.jpg"/>
+            <a href="#lightbox-2"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://i.ytimg.com/vi/Bvj2SG5NZI4/maxresdefault.jpg"/>
+            <a href="#lightbox-3"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://jardindelacosta.com.uy/wp-content/uploads/2019/05/lazo-de-amor.jpg"/>
+            <a href="#lightbox-4"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/zy6v8dmft9ab1.jpg?width=640&crop=smart&auto=webp&s=b9704e8826cee3fc70c02c6bdf3d69fb61d26560"/>
+            <a href="#lightbox-5"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://i.pinimg.com/originals/ca/78/90/ca7890d8e630b62de458e99803f53a46.jpg"/>
+            <a href="#lightbox-6"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://i.pinimg.com/736x/16/7d/3c/167d3c7a8d3696e27fc4b4427eae4126.jpg"/>
+            <a href="#lightbox-7"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/a02c4ejb7hic1.jpeg?width=640&crop=smart&auto=webp&s=aff41d78e2dd4ad0451f2e0525c3fe44324f9a2d"/>
+            <a href="#lightbox-9"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/19qppqjgxjic1.jpeg?width=640&crop=smart&auto=webp&s=ee9adddf88ecf237f5cf8294ccafbf0f758472f7"/>
+            <a href="#lightbox-10"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/w2mixalgrkic1.jpg?width=640&crop=smart&auto=webp&s=1a4120e2bfd7b116f082092081f719d2cdb3463f"/>
+            <a href="#lightbox-11"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/shmx9cvfochc1.jpeg?width=640&crop=smart&auto=webp&s=3e927f5cae0810b2b1743641639d35e131176ccf"/>
+            <a href="#lightbox-12"><h1>Abrir imagen</h1></a>
+          </div>
+          
+          <div class="carrCard carrCard-margin">
+            <img src="https://preview.redd.it/oprqdsv0stgc1.png?width=960&crop=smart&auto=webp&s=246dc1ccfe4cf86157efec7c8b8319a6c8a7f618"/>
+            <a href="#lightbox-13"><h1>Abrir imagen</h1></a>
+          </div>
+        </div>
+      </div>
+
+      <div id="lightboxes">
+        <div class="lightbox" id="lightbox-1">
+          <div class="content texto-no-seleccionable"><img src="https://i.pinimg.com/originals/1f/6e/02/1f6e02f2747f79a9bc0812969f5ae2e6.jpg"/>
+            <div class="title"><b>Mirta Fernández</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-2">
+          <div class="content"><img src="https://4.bp.blogspot.com/-0d7LIxyHXFw/Tch27-SGhKI/AAAAAAAAAAQ/zujC4PLz8gw/s1600/plant-a-flower-garden-preschool-craft1.jpg"/>
+            <div class="title"><b>Rosario García</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-3">
+          <div class="content"><img src="https://i.ytimg.com/vi/Bvj2SG5NZI4/maxresdefault.jpg"/>
+            <div class="title"><b>Luisa Martínez</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-4">
+          <div class="content"><img src="https://jardindelacosta.com.uy/wp-content/uploads/2019/05/lazo-de-amor.jpg"/>
+            <div class="title"><b>Estela Rodríguez</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-5">
+          <div class="content"><img src="https://preview.redd.it/zy6v8dmft9ab1.jpg?width=640&crop=smart&auto=webp&s=b9704e8826cee3fc70c02c6bdf3d69fb61d26560"/>
+            <div class="title"><b>Marta López</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-6">
+          <div class="content"><img src="https://i.pinimg.com/originals/ca/78/90/ca7890d8e630b62de458e99803f53a46.jpg"/>
+            <div class="title"><b>Laura Pérez</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-7">
+          <div class="content"><img src="https://i.pinimg.com/736x/16/7d/3c/167d3c7a8d3696e27fc4b4427eae4126.jpg"/>
+            <div class="title"><b>Valentina González</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-8">
+          <div class="content"><img src="https://i.pinimg.com/736x/88/86/15/8886155b233516efe733db47d9766f5c.jpg"/>
+            <div class="title"><b>Carolina Sánchez</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-9">
+          <div class="content"><img src="https://preview.redd.it/a02c4ejb7hic1.jpeg?width=640&crop=smart&auto=webp&s=aff41d78e2dd4ad0451f2e0525c3fe44324f9a2d"/>
+            <div class="title"><b>Elena Romero</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-10">
+          <div class="content"><img src="https://preview.redd.it/19qppqjgxjic1.jpeg?width=640&crop=smart&auto=webp&s=ee9adddf88ecf237f5cf8294ccafbf0f758472f7"/>
+            <div class="title"><b>Susana Díaz</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-11">
+          <div class="content"><img src="https://preview.redd.it/w2mixalgrkic1.jpg?width=640&crop=smart&auto=webp&s=1a4120e2bfd7b116f082092081f719d2cdb3463f"/>
+            <div class="title"><b>Victoria Flores</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-12">
+          <div class="content"><img src="https://preview.redd.it/shmx9cvfochc1.jpeg?width=640&crop=smart&auto=webp&s=3e927f5cae0810b2b1743641639d35e131176ccf"/>
+            <div class="title"><b>Ana Álvarez</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-13">
+          <div class="content"><img src="https://preview.redd.it/oprqdsv0stgc1.png?width=960&crop=smart&auto=webp&s=246dc1ccfe4cf86157efec7c8b8319a6c8a7f618"/>
+            <div class="title"><b>Elisa Gómez</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-14">
+          <div class="content"><img src="https://preview.redd.it/5taxjskrelic1.jpg?width=960&format=pjpg&auto=webp&s=8f372dbd5bf06c6736dfd1945fb79bff8b4d6dcd"/>
+            <div class="title"><b>María Navarro</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-15">
+          <div class="content"><img src="https://preview.redd.it/xdzm2skrelic1.jpg?width=960&format=pjpg&auto=webp&s=a8d4ce9f951bfcbeb1205a35d379a21c16ade292"/>
+            <div class="title"><b>Julia Torres</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-16">
+          <div class="content"><img src="https://preview.redd.it/wkgitxkrelic1.jpg?width=960&format=pjpg&auto=webp&s=5ff5cc7f99ca1dbe2f5d96f0764a4006b0363d9a"/>
+            <div class="title"><b>Beatriz Ruiz</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-17">
+          <div class="content"><img src="https://preview.redd.it/qtj7rwkrelic1.jpg?width=960&format=pjpg&auto=webp&s=bd03e887d789d0f16265bd704650b960f9b026fb"/>
+            <div class="title"><b>Liliana Ramírez</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox texto-no-seleccionable" id="lightbox-18">
+          <div class="content"><img src="https://preview.redd.it/nup5p1fj3ehc1.jpg?width=2052&format=pjpg&auto=webp&s=1af20a203a5dfc9b36ddd394e61059fdb9c90e5e"/>
+            <div class="title"><b>Liliana</b> en instagram</div><a class="close" href="#gallery"></a>
+          </div>
+        </div>         
+      </div>
+    </section>
+
+    <div class="separador-1"></div>
+
+    <div class="barrita-oscura"></div>
+    <section id="Information-Band-02">
+      <div class="informationBand-container">
+        <h1><em>Nuestra historia</em></h1>
+        <p>
+          Fausto, un amante de las plantas desde la infancia, convierte su sueño en realidad al crear Florion, un sitio web acogedor para entusiastas de la naturaleza. <br>
+          Después de años cultivando su propio jardín y compartiendo su pasión en redes sociales, Fausto decide reunir a otros amantes de las plantas para aprender y crecer juntos en un espacio donde pueden compartir e inspirarse con hermosas imágenes, conectar con otros amantes de la naturaleza y explorar el mundo vegetal.
+        </p>
+      </div>
+    </section>
+    <div class="barrita-oscura"></div>
+
+
+    <div class="separador-2"></div>
+
+
+    <section id="Videos-Band">
+      <div class="vidBand-Titulos">
+        <h1><em>Recomendaciones en línea</em></h1>
+        <h3>Conoce nuestras recomendaciones de otros amantes de las plantas</h3>
+      </div>
+      <div class="videos-band">
+        <div class="grid-container">
+          <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/z7jm7Ff7V5M" title="6 Consejos para mantener un césped saludable AHORRANDO tiempo y dinero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/-ehlyezOtxg" title="Oficios. Curso de huerta: la huerta orgánica (capítulo completo) - Canal Encuentro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/50zPKD5oNc4" title="Cómo cuidar tu terrario, luz, mantenimiento y agua." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/Y1jTRsBRh3g" title="Cómo cuidar de CUALQUIER planta! 3 sencillos pasos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/SR4zm0s1Ncg" title="7 CLAVES Del ÉXITO para CULTIVAR TOMATES 🍅en MACETA | Cómo CUIDAR Planta de Jitomate o Tomate" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/Umrazq1V9NA" title="COMO CUIDAR SUCULENTAS Y CACTUS DENTRO DE CASA (HD)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="barrita-oscura"></div>
+    
+
+    <div class="separador-2"></div>
+
+
+    <section id="AportComun">
+      <div class="AportComun-titulos">
+        <h1><em>Ayudas de la comunidad</em></h1>
+        <h3>!Escucha los consejos de la comunidad de Florion!</h3>
+      </div>
+      <div class="cards-Wrapper">
+        <div class="cards">
+          <div class="card">
+            <h3>Maria: Cuida tus Flores con Mucho Cariño</h3>
+            <div class="line"></div>
+            <p>Querido, dale a tus flores el cariño que merecen. Riégalas con mimo y no las ahogues. Mira cómo se sienten y dales espacio para estirar sus raíces. Un amor constante hará que tu jardín florezca con colores hermosos.</p>
+          </div>
+        
+          <div class="card">
+            <h3>Carmen: Mantén un Equilibrio Armonioso en tu Patio</h3>
+            <div class="line"></div>
+            <p>Querido amigo, selecciona con cuidado las plantas para tu patio. Piensa en cuánto sol necesitan. Logra un equilibrio para que todo se vea bonito. Un patio bien equilibrado no solo es bonito, sino que también es más fuerte contra bichos y enfermedades.</p>
+          </div>
+        
+          <div class="card">
+            <h3>Rosa: Fertiliza con Cariño y Sin Exagerar</h3>
+            <div class="line"></div>
+            <p>Cuando fertilices, sigue las indicaciones con calma. No te emociones y pongas demasiado. Opta por opciones orgánicas para un crecimiento natural y saludable en tu jardín. Tus plantas lo agradecerán con flores felices.</p>
+          </div>
+        
+          <div class="card">
+            <h3>Isabel: Protege tu Jardín del Clima Travieso</h3>
+            <div class="line"></div>
+            <p>Cuida tus plantas del viento fuerte y de las sorpresas del clima. Cubre las plantas más delicadas cuando haga mucho frío o calor. Protegerlas es como darles un abrazo de seguridad.</p>
+          </div>
+        
+          <div class="card">
+            <h3>Marta: Mantén tu Suelo Feliz y Saludable</h3>
+            <div class="line"></div>
+            <p>Querida, cuida bien la tierra. Añade cositas orgánicas para que el suelo esté fuerte y retenga el agua. Un suelo feliz da a tus plantas todo lo que necesitan para crecer bonitas y fuertes. ¡Como darles una buena comida!</p>
+          </div>
+        
+          <div class="card">
+            <h3>Juana: Observa y Actúa con Prontitud, como los Buenos Tiempos</h3>
+            <div class="line"></div>
+            <p>Observa tu jardín a menudo. Detecta problemas pronto, como bichitos o enfermedades, y actúa rápido. La prevención es clave para tener un jardín bonito y saludable. ¡Como en los buenos tiempos de antaño!</p>
+          </div>
+        </div>
+      </div>
+      <h3 class="subtitle-comunidad">
+        ¿Te gustaría aportar tus conocimientos y dotes fotográficos?<br>
+          ¡Envíanos tus comentarios y fotos a nuestro instagram! 
+          Nosotros nos encargaremos de compartirlas con la comunidad <br>
+      </h3>
+    </section>
+    <div class="barrita-oscura"></div>
+
+
+
+    <section id="newsletter">
+      <div id="anchorContacto"></div>
+      <div class="newsletter">
+        <h1>¿Interesado por saber más?</h1>
+        <h3>¡Únete a nuestro resumen semanal!</h3>
+        <div>
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="correoInput" name="" value="" placeholder="Ingrese su correo">
+          <button class="texto-no-seleccionable" id="BotonSubscribirse"> Subscribirse</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <a class="texto-no-seleccionable" href=""><img src="img/logo/Logo florion 3.png" alt="" /></a>
+
+          <div class="footer-icons">
+            <h4>Redes</h4>
+            <a target="_blank" href="http://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a target="_blank" href="http://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="http://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+            <a target="_blank" href="http://https://linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-center">
+          <h4>Contacto</h4>
+          <div>
+            <a
+              target="_blank"
+              href="https://www.google.com.ar/maps/place/Valent%C3%ADn+G%C3%B3mez+2980,+C1191AAD+Buenos+Aires/@-34.6055836,-58.40808,19.5z/data=!4m6!3m5!1s0x95bccaf2cee0e723:0x8fc11c39173865b5!8m2!3d-34.6054757!4d-58.4078031!16s%2Fg%2F11hbnzn2cv?entry=ttu"
+            >
+              <p>
+                <i class="fa fa-map-marker"></i> Belgrano 2217 Capital Federal,
+                Buenos Aires
+              </p>
+            </a>
+          </div>
+
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+54 9 15847512</p>
+          </div>
+
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:florion@hotmail.com">florion@hotmail.com</a></p>
+          </div>
+        </div>
+      </div>
+      <p class="footer-company-name">Derechos reservados para Florion © 2024</p>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
